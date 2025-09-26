@@ -22,7 +22,7 @@ body {
 
 .candle-count-display-1 {
   text-align: center;
-  margin-top: 500px;
+  margin-top: 450px;
   margin-bottom: 20px;
   font-family: 'Arial', sans-serif;
   font-size: 30px;
@@ -148,7 +148,7 @@ body {
 }
 
 .candle {
-  background-color: #7B020B;
+  background-color: #d6555e;
   width: 12px;
   height: 35px;
   border-radius: 6px/3px;
@@ -165,7 +165,7 @@ body {
   width: 12px;
   height: 6px;
   border-radius: 50%;
-  background-color: #ad030f;
+  background-color: #863339;
   z-index: 10;
 }
 
