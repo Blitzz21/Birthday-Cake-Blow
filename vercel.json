@@ -1,6 +1,10 @@
 {
     "rewrites": [
         {
+            "source": "/",
+            "destination": "/xixi.html"
+        },
+        {
             "source": "/hbd",
             "destination": "/xixi.html"
         }
