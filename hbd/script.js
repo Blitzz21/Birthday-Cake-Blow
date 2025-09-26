@@ -7,6 +7,29 @@ document.addEventListener("DOMContentLoaded", function () {
   let microphone;
   let audio = new Audio('hbd.mp3');
 
+  // Add default candles when page loads
+  function addDefaultCandles() {
+    // Add 5 candles positioned across the top of the cake (250px wide)
+      // Fine-tuned positioning on the exact cake edge perimeter
+      // Adjusted to match the actual cake oval shape precisely
+      const candlePositions = [
+        { left: 125, top: -23 },      // Top center - on cake surface
+        { left: 180, top: -10 },      // Top right curve
+        { left: 220, top: 5 },     // Right side upper
+        { left: 200, top: 30 },     // Right side lower
+        { left: 165, top: 40 },     // Bottom right curve
+        { left: 125, top: 45 },     // Bottom center - on cake bottom
+        { left: 80, top: 40 },      // Bottom left curve
+        { left: 50, top: 30 },      // Left side lower
+        { left: 35, top: 5 },      // Left side upper
+        { left: 70, top: -10 },       // Top left curve
+      ];
+    
+    candlePositions.forEach(pos => {
+      addCandle(pos.left, pos.top);
+    });
+  }
+
 
   function updateCandleCount() {
     const activeCandles = candles.filter(
@@ -99,6 +122,9 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     console.log("getUserMedia not supported on your browser!");
   }
+
+  // Add default candles when page loads
+  addDefaultCandles();
 });
 
 function triggerConfetti() {
